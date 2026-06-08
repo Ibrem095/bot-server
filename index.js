@@ -41,4 +41,4 @@ function scheduleDaily() {
 }
 app.get("/report", async (req, res) => { await sendDailyReport(); res.json({ ok: true }); });
 app.get("/", (req, res) => res.json({ ok: true, clients: clientsData.length }));
-app.listen(process.env.PORT || 3000, () => { console.log("Сервер запущен"); scheduleDaily(); });
+app.listen(process.env.PORT || 8080, () => { console.log("Сервер запущен"); scheduleDaily(); });
